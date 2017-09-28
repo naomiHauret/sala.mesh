@@ -24,15 +24,33 @@ const axisHelper = new THREE.AxisHelper(5)
 scene.add(axisHelper)
 
 //meshes
-const geometry = new THREE.BoxGeometry(1, 1, 1);
+const geometry = new THREE.BoxGeometry(1, 1, 1)
 const material = new THREE.MeshBasicMaterial({
   color: "blue"
 });
-const cube = new THREE.Mesh(geometry, material);
-scene.add(cube);
+const group = new THREE.Group()
+const cube = new THREE.Mesh(geometry, material)
+const cube2 = new THREE.Mesh(geometry, material);
+
+cube2.position.set(0, 1, 0)
+group.add(cube)
+group.add(cube2)
+
+scene.add(group)
 
 document.body.appendChild(renderer.domElement) // append a canvas to body
+let i = group.position.x
+let lastTimeStamp = 0
+const INTERVAL = 200
+
 const animate = timestamp => {
+
+    if(timestamp - lastTimeStamp > INTERVAL){
+        group.position.x  = (i % 15)
+        i+= 0.5
+        lastTimeStamp = timestamp
+    }
+
     renderer.render(scene, camera)
     requestAnimationFrame(animate)
 }
