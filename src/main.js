@@ -19,6 +19,10 @@ renderer.setSize(window.innerWidth, window.innerHeight) // same size than our as
 //controls
 const controls = new OrbitControls(camera, renderer.domElement)
 
+// axis helper
+const axisHelper = new THREE.AxisHelper(5)
+scene.add(axisHelper)
+
 //meshes
 const geometry = new THREE.BoxGeometry(1, 1, 1);
 const material = new THREE.MeshBasicMaterial({
