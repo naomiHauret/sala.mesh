@@ -57,7 +57,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/dist";
+/******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 0);
@@ -397,7 +397,7 @@ window.addEventListener('mousemove', (e)=> {
 const music = new Audio(__WEBPACK_IMPORTED_MODULE_2__assets_sound_pallet_town_mp3___default.a)
 const doShout = new Audio(__WEBPACK_IMPORTED_MODULE_3__assets_sound_charmander_ogg___default.a);
 music.loop = true
-music.play()
+//music.play()
 
 
 window.addEventListener("click", e => {
@@ -420,7 +420,7 @@ window.addEventListener("click", e => {
 
 // removed by extract-text-webpack-plugin
     if(false) {
-      // 1506868307526
+      // 1506870214980
       var cssReload = require("../../node_modules/css-hot-loader/hotModuleReplacement.js")(module.id, {"fileMap":"{fileName}"});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);
