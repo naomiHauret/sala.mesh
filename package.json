@@ -20,7 +20,7 @@
     "start": "npm run build:dev && webpack-dev-server",
     "build:dev": "rimraf dist && NODE_ENV=dev webpack",
     "build:prod": "rimraf dist && NODE_ENV=production webpack",
-    "deploy": "git subtree push --prefix dist origin gh-pages"
+    "deploy": "npm run build:prod && git add . && git commit -m ':rocket: deploy' && git push && git subtree push --prefix dist origin gh-pages"
   },
   "dependencies": {
     "stats.js": "^0.17.0",
