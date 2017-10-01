@@ -1,0 +1,49 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans|VT323);html {
+    font-size: 18px;
+}
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    color: white;
+    font-family: 'Open sans';
+    font-size: 1rem;
+}
+
+canvas {
+    display: block;
+}
+
+.title {
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    font-size: 0.85em;
+}
+
+h1 {
+    font-family: 'VT323';
+    font-size: 3rem;
+    margin-bottom: 10px;
+    font-weight: initial;
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+    html {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+    .title {
+        text-align: left;
+        padding: 20px;
+    }
+}
+
+@media (min-width: 375px) {
+    html {
+        font-size: 20px
+    }
+}
