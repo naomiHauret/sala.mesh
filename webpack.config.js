@@ -12,8 +12,8 @@ let plugins = [ extractCSS,
       inject: true
     })
 ]
-if (process.env.NODE_ENV === "production") plugins.push(new UglifyJSPlugin())
 
+if (process.env.NODE_ENV === "production") plugins.push(new UglifyJSPlugin())
 
 module.exports = {
   context: path.resolve(__dirname, "src"),
@@ -21,10 +21,16 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     publicPath: "./",
-    filename: "assets/scripts/[name].bundle.dev.js"
+    filename: "assets/scripts/[name].bundle.js"
   },
   module: {
     rules: [
+      // Javascript files
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: "babel-loader",
+      },
       // HTML files or templates
       {
         test: /\.html$/,
