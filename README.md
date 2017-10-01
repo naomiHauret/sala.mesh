@@ -1,5 +1,6 @@
 # Sala.mesh :fire:
 > A ThreeJS + audio experience :fire: :sparkles:
+
 > :warning: Disclaimer: Charmander and all audio featured here are property of Satoshi Taijiri, The Pokémon Company, Nintendo etc etc. Many thanks to them for this awesome licence. You guys are awesome :metal: :clap: Anyway, I just pulled awesome ressources together, nothing more :sparkles:
 
 A demo is alive [here](https://naomihauret.github.io/sala.mesh).
