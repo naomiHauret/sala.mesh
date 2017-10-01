@@ -20,7 +20,7 @@ module.exports = {
   entry: ["./main.js"],
   output: {
     path: path.resolve(__dirname, "dist"),
-    publicPath: "/",
+    publicPath: "./",
     filename: "assets/scripts/[name].bundle.dev.js"
   },
   module: {
