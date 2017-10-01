@@ -1,9 +1,9 @@
-const path = require("path");
-const webpack = require("webpack");
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
-const extractCSS = new ExtractTextPlugin("assets/stylesheets/[name].bundle.dev.css");
+const path = require("path")
+const webpack = require("webpack")
+const ExtractTextPlugin = require("extract-text-webpack-plugin")
+const HtmlWebpackPlugin = require("html-webpack-plugin")
+const UglifyJSPlugin = require("uglifyjs-webpack-plugin")
+const extractCSS = new ExtractTextPlugin("assets/stylesheets/[name].bundle.dev.css")
 
 let plugins = [ extractCSS,
     new HtmlWebpackPlugin({
@@ -79,6 +79,7 @@ module.exports = {
   },
   devtool: process.env.NODE_ENV === "dev" ? "eval-source-map" : "",
   devServer: {
+    port: process.env.PORT || 9000,
     host: "0.0.0.0",
     contentBase: "dist/"
   }
