@@ -1,6 +1,7 @@
 {
+  "name": "Sala.mesh",
   "version": "1.0.0",
-  "description": "ThreeJS playground",
+  "description": "A ThreeJS experience (with audio and pokemons)",
   "author": "Naomi Hauret",
   "license": "MIT",
   "devDependencies": {
