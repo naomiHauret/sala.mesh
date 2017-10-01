@@ -309,7 +309,7 @@ window.addEventListener('mousemove', (e)=> {
 const music = new Audio(backgroundMusic)
 const doShout = new Audio(charmanderShout);
 music.loop = true
-//music.play()
+music.play()
 
 
 window.addEventListener("click", e => {
