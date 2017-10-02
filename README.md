@@ -14,7 +14,7 @@ A demo is alive [here](https://naomihauret.github.io/sala.mesh).
 2. `cd` into the repo folder
 3. In a terminal, launch `npm install`
 
-To start **dev mode**, launch `npm run start`. This will launch webpack devserver. If you didn't change webpack config in `webpack.config.js`, it should be available at `localhost:9000`.
+To start **dev mode**, launch `npm start`. This will launch webpack devserver. If you didn't change webpack config in `webpack.config.js`, it should be available at `localhost:9000`.
 
 To start **prod mode**, launch `npm run test:prod`. Same as above, you should see stuff happening at `localhost:9000`.
 
