@@ -7,13 +7,14 @@ A demo is alive [here](https://naomihauret.github.io/sala.mesh).
 
 ## Get started
 > :warning: `node` >6 and `npm` >5 are required to run this project.
+
 > It should run fine on Linux, Windows and Mac OSX. I don't know. Otherwise, feel free to hit issue.
 
 1. Clone this repo
 2. `cd` into the repo folder
 3. In a terminal, launch `npm install`
 
-To start **dev mode**, launch `npm run start`. This will launch webpack devserver. If you didn't change webpack config in `webpack.config.js`, it should be available at `localhost:9000`.
+To start **dev mode**, launch `npm start`. This will launch webpack devserver. If you didn't change webpack config in `webpack.config.js`, it should be available at `localhost:9000`.
 
 To start **prod mode**, launch `npm run test:prod`. Same as above, you should see stuff happening at `localhost:9000`.
 
