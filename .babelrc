@@ -3,6 +3,7 @@
         "node_modules/**/*"
     ],
     "presets": [
-        "env"
+        "env",
+        "react"
     ]
 }

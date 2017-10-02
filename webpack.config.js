@@ -27,7 +27,7 @@ module.exports = {
     rules: [
       // Javascript files
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: "babel-loader",
       },
@@ -81,7 +81,7 @@ module.exports = {
   },
   plugins,
   resolve: {
-    extensions: [".js"]
+    extensions: [".js", ".jsx"]
   },
   devtool: process.env.NODE_ENV === "dev" ? "eval-source-map" : "",
   devServer: {
