@@ -14,6 +14,6 @@ ReactDOM.render(<UserInterface />, document.querySelector("#ui"));
 // music
 const music = new Audio(backgroundMusic)
 music.loop = true
-music.play()
+//music.play()
 
 console.log(process.env.NODE_ENV);

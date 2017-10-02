@@ -20,7 +20,7 @@ module.exports = {
   entry: ["./main.js"],
   output: {
     path: path.resolve(__dirname, "dist"),
-    publicPath: "./",
+    publicPath: process.env.NODE_ENV === "production" ? "./" : "/dist",
     filename: "assets/scripts/[name].bundle.js"
   },
   module: {

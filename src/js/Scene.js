@@ -32,6 +32,9 @@ class Scene {
     // spotlight
     this.spotLight.position.set(10, 15, 10)
     this.spotLight.castShadow = true
+    this.spotLight.decay = 7 // @TODO correct this
+    this.spotLight.penumbra = 0.1 // @TODO correct this
+
     this.scene.add(this.spotLight)
 
     // camera
@@ -47,8 +50,8 @@ class Scene {
     // scene helpers
     this.spotLightHelper = new THREE.SpotLightHelper(this.spotLight)
     this.axisHelper = new THREE.AxisHelper(5)
-    this.showSpotlightHelper=== true ? this.scene.add(this.spotLightHelper) : ""
-    this.showAxisHelper === true ? this.scene.add(this.axisHelper) : ""
+    this.showSpotlightHelper && this.scene.add(this.spotLightHelper)
+    this.showAxisHelper && this.scene.add(this.axisHelper)
 
     // scene controls
     this.controls = new OrbitControls(this.camera, this.renderer.domElement)
