@@ -10,6 +10,12 @@ body {
     color: white;
     font-family: 'Open sans';
     font-size: 1rem;
+    position: relative;
+}
+
+.ui {
+    position: fixed;
+    z-index: 2;
 }
 
 canvas {
@@ -17,18 +23,73 @@ canvas {
 }
 
 .title {
-    position: fixed;
     width: 100%;
     text-align: center;
     font-size: 0.85em;
 }
 
 h1 {
-    font-family: 'VT323';
     font-size: 3rem;
     margin-bottom: 10px;
     font-weight: initial;
 }
+
+.toggle-music {
+    border: 0;
+    background: linear-gradient(to left, #16a085, #54d98c);
+    color: white;
+    bottom: 100px;
+    left: 20px;
+    border-radius: 100%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    z-index: 3;
+}
+
+footer,
+h1 {
+    font-family: 'VT323';
+}
+
+footer {
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+}
+
+// SweetAlert
+
+.swal-modal {
+    border: ridge 5px rgb(200, 200, 200) !important;
+    font-family: 'Open sans';
+}
+
+.swal-title {
+    font-family: 'VT323';
+    background: linear-gradient(to left, #16a085, #54d98c);
+    color: white;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-bottom: 50px !important;
+    border-radius: 1em;
+    font-size: 40px;
+    font-weight: normal;
+}
+
+.swal-content__img {
+    height: 150px;
+}
+
+.swal-button {
+    background: rgb(28, 134, 140);
+    box-shadow: 0 10px 35px -8px rgb(28, 134, 140);
+    color: white;
+    font-family: inherit;
+}
+
+// Media queries
 
 @media (max-width: 768px) and (orientation: landscape) {
     html {
@@ -47,5 +108,11 @@ h1 {
 @media (min-width: 375px) {
     html {
         font-size: 20px
+    }
+}
+
+@media (min-width: 768px) {
+    .toggle-music {
+        bottom: 20px;
     }
 }

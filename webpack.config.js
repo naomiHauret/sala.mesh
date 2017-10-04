@@ -27,7 +27,7 @@ module.exports = {
     rules: [
       // Javascript files
       {
-        test: /\.(js|jsx)$/,
+        test: /\.js$/,
         exclude: /node_modules/,
         use: "babel-loader",
       },
@@ -81,12 +81,18 @@ module.exports = {
   },
   plugins,
   resolve: {
-    extensions: [".js", ".jsx"]
+    extensions: [".js"]
   },
   devtool: process.env.NODE_ENV === "dev" ? "eval-source-map" : "",
   devServer: {
     port: process.env.PORT || 9000,
     host: "0.0.0.0",
-    contentBase: "dist/"
+    contentBase: "dist/",
+    watchContentBase: true,
+    open: true,
+    overlay: {
+      warnings: process.env.NODE_ENV === "dev" ? true : false,
+      errors: process.env.NODE_ENV === "dev" ? true : false,
+    }
   }
 }

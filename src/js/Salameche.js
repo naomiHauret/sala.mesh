@@ -1,5 +1,8 @@
 import * as THREE from "three"
+import swal from "sweetalert"
 import charmanderShout from "./../assets/sound/charmander.ogg"
+import hiGif from "./../assets/img/hi.gif"
+import problemGif from "./../assets/img/problem.gif"
 
 class Salameche {
     constructor(renderer, camera, scene) {
@@ -254,7 +257,19 @@ class Salameche {
 
           if (this.hoverSalamecheCount == 1) {
             this.triggerModal = setTimeout(() => {
-              alert("Problem bro?")
+              this.doShout.currentTime = 0
+              this.doShout.play()
+              swal({
+                  content: {
+                    element: "img",
+                    attributes: {
+                      src: problemGif,
+                    },
+                  },
+                  title: "Salamèche",
+                  text: "Sala? (Problem, bro?)",
+                  button: "Nah, it's nothing",
+                })
             }, 10000)
           }
         } else if (intersects.length <= 0 && this.isHeadStraight == false) {
@@ -281,6 +296,18 @@ class Salameche {
         if (intersects.length > 0) {
           this.doShout.currentTime = 0
           this.doShout.play()
+          swal({
+            content: {
+              element: "img",
+              attributes: {
+                src: hiGif
+              },
+            },
+            title: "Salamèche",
+            text: "Sala, sala ? Salamèche !",
+            button: "Hi to you too Salamèche!"
+          })
+
         }
     }
 

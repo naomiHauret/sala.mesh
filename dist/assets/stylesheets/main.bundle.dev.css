@@ -8,6 +8,12 @@ body {
     color: white;
     font-family: 'Open sans';
     font-size: 1rem;
+    position: relative;
+}
+
+.ui {
+    position: fixed;
+    z-index: 2;
 }
 
 canvas {
@@ -15,17 +21,40 @@ canvas {
 }
 
 .title {
-    position: fixed;
     width: 100%;
     text-align: center;
     font-size: 0.85em;
 }
 
 h1 {
-    font-family: 'VT323';
     font-size: 3rem;
     margin-bottom: 10px;
     font-weight: initial;
+}
+
+.toggle-music {
+    bottom: 100px;
+    left: 20px;
+    border-radius: 100%;
+    border: 0;
+    background: linear-gradient(to left, #16a085, #54d98c);
+    color: white;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    z-index: 3;
+}
+
+footer,
+h1 {
+    font-family: 'VT323';
+}
+
+footer {
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    text-align: center;
 }
 
 @media (max-width: 768px) and (orientation: landscape) {
@@ -45,5 +74,11 @@ h1 {
 @media (min-width: 375px) {
     html {
         font-size: 20px
+    }
+}
+
+@media (min-width: 768px) {
+    .toggle-music {
+        bottom: 20px;
     }
 }
