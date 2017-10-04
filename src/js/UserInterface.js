@@ -15,7 +15,7 @@ class UserInterface {
     initialize() {
         this.toggleMusicButton.innerHTML = notPlayingIcon
         this.backgroundMusic.loop = true
-        //this.backgroundMusic.play()
+        this.backgroundMusic.play()
         this.isPlaying = true
     }
 
